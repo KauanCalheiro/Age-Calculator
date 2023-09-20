@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="./script.js" defer ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    
+    <div class="date__input">
+      
+      <form>
+        
+        <div class="div__day">
+          <p>DIA</p>
+          <input type="text" name="day" id="day" placeholder="DD">
+          <small id="day-error-message"></small>
+        </div>
+      
+        <div class="div__month">
+          <p>MÊS</p>
+          <input type="text" name="month" id="month" placeholder="MM">
+          <small id="month-error-message"></small>
+        </div>
+        
+        <div class="div__year">
+          <p>ANO</p>
+          <input type="text" name="year" id="year" placeholder="YYYY">
+          <small id="year-error-message"></small>
+        </div>
+      </form>
+    </div>
+    
+    <div class="separator">
+      <button class="button__submit" type="submit" id="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="2">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="display__time">
+      
+      <h2 class="display__time__years"><span> - - </span>&nbspanos</h2>
+      <h2 class="display__time__months"><span> - - </span>&nbspmeses</h2>
+      <h2 class="display__time__days"><span> - - </span>&nbspdias</h2>
+      
+    </div>
+    
+  </main>
+</body>
+</html>
