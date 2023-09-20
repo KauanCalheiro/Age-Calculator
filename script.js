@@ -171,6 +171,19 @@
         var months_text = `<span>${array_age.months}</span>&nbsp` + ( array_age.months == 1 ? "mês" : "meses" );
         var years_text  = `<span>${array_age.years}</span>&nbsp` + ( array_age.years == 1 ? "ano" : "anos" )
         
+        if( array_age.days == 0 )
+        {
+            days_text = "";
+        }
+        if( array_age.months == 0 )
+        {
+            months_text = "";
+        }
+        if( array_age.years == 0 )
+        {
+            years_text = "";
+        }
+        
         days.html( days_text );
         months.html( months_text );
         years.html( years_text );
