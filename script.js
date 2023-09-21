@@ -5,6 +5,10 @@
     
     var button = $("#button");
     
+    day_input.add( month_input ).add( year_input ).focus( () => {
+        buttonRemoveClasses();
+    });
+    
     day_input.blur( () => {
         validadeDay( day_input );
     });
@@ -20,19 +24,15 @@
     button.click( () => {
         if( checkFields( day_input, month_input, year_input ) )
         {
+            button.addClass("button__submit__valid__input");
             var array_age = calcAge( day_input.val(), month_input.val(), year_input.val() );
             putOnScreen( array_age );
         }
+        else
+        {
+            button.addClass("button__submit__invalid__input");
+        }
     });
-    
-    console.log( window.screen.width );
-    
-    if( window.screen.width < 800)
-    {
-        console.log("here");
-        console.log( $("svg") );
-        $("svg").setAttribute("viewBox", "0 0 65 35");
-    }
     
     function validadeDay( day )
     {
@@ -187,6 +187,12 @@
         days.html( days_text );
         months.html( months_text );
         years.html( years_text );
+    }
+    
+    function buttonRemoveClasses()
+    {
+        button.removeClass("button__submit__invalid__input");
+        button.removeClass("button__submit__valid__input");
     }
     
 })()

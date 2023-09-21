@@ -105,10 +105,25 @@ input:focus
     transition: 0.2s;
 }
 
-.button__submit:focus, .button__submit:active
+
+.button__submit__valid__input
 {
     rotate: 90deg;
     transition: 0.4s;
+}
+
+.button__submit__invalid__input
+{
+    animation: shake 0.4s ease-in-out 1;
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }
 }
 
 
